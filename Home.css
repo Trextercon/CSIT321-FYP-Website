@@ -1,0 +1,39 @@
+body {
+    background-color: black;
+    font-family: Arial, sans-serif; 
+    color: white;
+}
+
+h1 {
+    color: blue; 
+}
+
+p {
+    color: red; 
+}
+
+        nav {
+            background-color: #222;
+            padding: 12px 20px;
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        nav ul li {
+            margin-right: 20px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+        }
+
+        nav ul li a:hover {
+            text-decoration: underline;
+        }
