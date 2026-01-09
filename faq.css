@@ -1,0 +1,140 @@
+/* ---------- Base ---------- */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: "Segoe UI", Roboto, Arial, sans-serif;
+    background-color: #0d0d0d;
+    color: #f0f0f0;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* ---------- Header (Same as Main Page) ---------- */
+header {
+    background-color: #111;
+    border-bottom: 1px solid #222;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+    margin: 0;
+    padding: 0;
+}
+
+nav a {
+    text-decoration: none;
+    color: #ddd;
+    font-size: 15px;
+    transition: color 0.2s ease;
+}
+
+nav a:hover,
+nav a.active {
+    color: #ff6600;
+}
+
+/* ---------- FAQ Hero ---------- */
+.faq-hero {
+    padding: 80px 20px 60px;
+    text-align: center;
+    background: linear-gradient(180deg, #1a1a1a, #0d0d0d);
+}
+
+.faq-hero h1 {
+    font-size: 42px;
+    margin-bottom: 10px;
+}
+
+.faq-hero p {
+    max-width: 650px;
+    margin: 0 auto;
+    color: #ccc;
+    font-size: 17px;
+}
+
+/* ---------- FAQ Content ---------- */
+.faq-content {
+    padding: 70px 20px;
+}
+
+/* Accordion Item */
+.faq-item {
+    background-color: #1f1f1f;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    padding: 5px 25px;
+    transition: background 0.2s ease;
+}
+
+.faq-item[open] {
+    background-color: #242424;
+}
+
+/* Question */
+.faq-item summary {
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 18px 0;
+    list-style: none;
+    position: relative;
+}
+
+/* Remove default arrow */
+.faq-item summary::-webkit-details-marker {
+    display: none;
+}
+
+/* Custom indicator */
+.faq-item summary::after {
+    content: "+";
+    position: absolute;
+    right: 0;
+    font-size: 22px;
+    color: #ff6600;
+}
+
+/* Open state indicator */
+.faq-item[open] summary::after {
+    content: "−";
+}
+
+/* Answer */
+.faq-item p {
+    margin: 0 0 20px;
+    color: #ccc;
+    font-size: 15px;
+}
+
+/* ---------- Footer (Same as Main Page) ---------- */
+footer {
+    background-color: #111;
+    border-top: 1px solid #222;
+    padding: 20px;
+    text-align: center;
+    font-size: 14px;
+    color: #aaa;
+}
