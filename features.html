@@ -36,7 +36,8 @@
     <section class="features-list">
         <div class="container">
             
-            <div class="feature-item">
+            <div class="feature-item" onclick="toggleFeature(this)">
+                <div class="feature-header">
                 <div class="feature-icon">🎮</div> <div class="feature-text">
                     <h3>Customizable Layouts</h3>
                     <p>
@@ -47,8 +48,17 @@
                     </p>
                 </div>
             </div>
+            <div class="feature-expand">
+                    <img src="img/layout_editor.jpg" alt="Layout Editor Interface">
+                    <p>
+                        <strong>Total Control:</strong> Enter "Edit Mode" to move buttons anywhere on the screen.
+                        You can save specific profiles for different genres like FPS, RPG, or Fighting games.
+                    </p>
+                </div>
+            </div>
 
-            <div class="feature-item">
+            <div class="feature-item" onclick="toggleFeature(this)">
+                <div class="feature-header">
                 <div class="feature-icon">⚡</div>
                 <div class="feature-text">
                     <h3>Low-Latency Performance</h3>
@@ -57,6 +67,14 @@
                         local Wi-Fi protocols to ensure your inputs register 
                         instantly on your desktop, providing a lag-free experience 
                         critical for competitive gaming.
+                    </p>
+                </div>
+            </div>
+            <div class="feature-expand">
+                    <img src="img/lowlatency.jpg" alt="Performance Graph">
+                    <p>
+                        <strong>Zero Lag:</strong> Our proprietary UDP protocol ensures that when you tap, 
+                        the action happens instantly on your screen.
                     </p>
                 </div>
             </div>

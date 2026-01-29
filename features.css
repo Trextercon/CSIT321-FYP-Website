@@ -149,9 +149,14 @@ nav a.active {
     text-align: left;
 }
 
-.feature-item:hover .feature-expand {
+.feature-item.active .feature-expand {
     display: block; /* Shows the content */
     animation: fadeIn 0.5s ease;
+}
+
+feature-item.activ
+{
+    background-color: #252520;
 }
 
 @keyframes fadeIn 
