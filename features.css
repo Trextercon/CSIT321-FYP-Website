@@ -122,8 +122,24 @@ nav a.active {
     align-items: flex-start;
     gap: 25px;
     width: 100%;
+    position: relative;
+    padding-right: 30px;
 }
-
+.feature-header::after {
+    content: '▼';         /* Down arrow character */
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 14px;
+    color: #666;
+    transition: transform 0.3s ease;
+}
+/* Rotate the arrow 180 degrees when active */
+.feature-item.active .feature-header::after {
+    transform: translateY(-50%) rotate(180deg);
+    color: #ff6600;   
+}
 .feature-expand 
 {
     display: none; /* not shown by default */
@@ -206,5 +222,94 @@ footer {
         flex-direction: column;
         text-align: center;
         align-items: center;
+    }
+}
+.features-action {
+    text-align: center;
+    margin-top: 50px;
+}
+
+/* The Outline Button Style */
+.btn.outline {
+    background-color: transparent;
+    border: 2px solid #ff6600; /* Your brand orange */
+    color: #ff6600;
+    transition: all 0.3s ease;
+}
+
+/* hover: fillorange*/
+.btn.outline:hover {
+    background-color: #ff6600;
+    color: #fff;
+    box-shadow: 0 0 15px rgba(255, 102, 0, 0.4); /* Nice glow effect */
+    transform: translateY(-2px);
+}
+
+/* smallerfeatures*/
+.more-features {
+    padding: 40px 20px 80px; /* Space it out */
+    background-color: #0d0d0d; /* Keeps background consistent */
+    border-top: 1px solid #222; /* Subtle separator line */
+}
+
+.more-features h2 {
+    text-align: center;
+    font-size: 28px;
+    margin-bottom: 40px;
+    color: #fff;
+}
+
+.mini-features-grid {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap; /* allow stacking on mobile*/
+}
+
+.mini-feature {
+    background-color: #1a1a1a;
+    border-radius: 10px;
+    padding: 25px;
+    flex: 1; /* mkes all 3 equal width */
+    min-width: 250px; 
+    text-align: center;
+    border: 1px solid #222;
+    transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+
+.mini-feature:hover {
+    transform: translateY(-5px);
+    border-color: #ff6600; /* emphasise border*/
+}
+
+.mini-icon {
+    font-size: 32px;
+    margin-bottom: 15px;
+    display: inline-block;
+    background: #111;
+    width: 60px;
+    height: 60px;
+    line-height: 60px; /*center emoji*/
+    border-radius: 50%;
+}
+
+.mini-feature h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #eee;
+}
+
+.mini-feature p {
+    font-size: 14px;
+    color: #aaa;
+    margin: 0;
+    line-height: 1.5;
+}
+
+/* Mobile Adjustment */
+@media (max-width: 768px) {
+    .mini-features-grid {
+        flex-direction: column; /* Stack them vertically on phone */
     }
 }
