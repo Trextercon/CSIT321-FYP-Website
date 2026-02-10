@@ -1,4 +1,3 @@
-/* ---------- Base ---------- */
 * {
     box-sizing: border-box;
 }
@@ -17,29 +16,37 @@ body {
     padding: 0 20px;
 }
 
-/* ---------- Header ---------- */
 header {
-    background-color: #111;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background-color: rgba(17,17,17,0.95);
     border-bottom: 1px solid #222;
+    backdrop-filter: blur(6px);
 }
 
 header .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 70px;
+    height: 72px;
 }
 
 .logo {
     font-size: 24px;
     font-weight: 600;
-    letter-spacing: 0.5px;
+    color: #fff;
+    text-decoration: none;
+}
+
+.logo:hover {
+    color: #ff6600;
 }
 
 nav ul {
     list-style: none;
     display: flex;
-    gap: 25px;
+    gap: 28px;
     margin: 0;
     padding: 0;
 }
@@ -48,159 +55,182 @@ nav a {
     text-decoration: none;
     color: #ddd;
     font-size: 15px;
-    transition: color 0.2s ease;
 }
 
 nav a:hover {
     color: #ff6600;
 }
+.btn {
+    display: inline-block;
+    padding: 16px 42px;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 999px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
 
-/* ---------- Hero ---------- */
+.btn-primary {
+    background: linear-gradient(135deg, #ff6600, #ff8533);
+    color: #fff;
+    box-shadow: 0 12px 30px rgba(255,102,0,0.35);
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 18px 45px rgba(255,102,0,0.55);
+}
+
 .hero {
-    background: linear-gradient(180deg, #1a1a1a, #0d0d0d);
-    padding: 100px 20px;
+    min-height: 100vh;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     text-align: center;
+    background:
+        linear-gradient(rgba(13,13,13,0.8), rgba(13,13,13,0.95)),
+        url("img/heroimg.jpg") center / cover no-repeat;
+}
+
+.hero-content {
+    max-width: 700px;
 }
 
 .hero h1 {
-    font-size: 44px;
-    margin-bottom: 15px;
+    font-size: 52px;
+    margin-bottom: 18px;
 }
 
 .hero p {
-    max-width: 600px;
-    margin: 0 auto 30px;
-    font-size: 18px;
+    font-size: 19px;
     color: #ccc;
+    margin-bottom: 40px;
 }
 
-/* ---------- Buttons ---------- */
-.btn {
-    display: inline-block;
-    padding: 14px 30px;
-    font-size: 16px;
-    border-radius: 6px;
-    text-decoration: none;
-    font-weight: 500;
-    transition: background 0.2s ease, transform 0.1s ease;
+.our-team {
+    position: relative;
+    min-height: 85vh;
+    padding: 120px 20px;
+    background: url("img/team.jpg") center / cover no-repeat;
+    display: flex;
+    align-items: center;
+    text-align: center;
 }
 
-.btn.primary {
-    background-color: #ff6600;
-    color: #fff;
+.team-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.75);
 }
 
-.btn.primary:hover {
-    background-color: #e65c00;
-    transform: translateY(-1px);
+.team-content {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
 }
 
-/* ---------- Features ---------- */
+.our-team h2 {
+    font-size: 38px;
+    margin-bottom: 20px;
+}
+
+.our-team p {
+    font-size: 17px;
+    color: #ccc;
+    margin-bottom: 40px;
+}
+
 .features {
-    padding: 70px 20px;
+    padding: 140px 20px;
 }
 
 .features h2 {
     text-align: center;
-    margin-bottom: 40px;
-    font-size: 32px;
+    font-size: 34px;
+    margin-bottom: 60px;
 }
 
 .cards {
     display: flex;
-    gap: 25px;
+    gap: 30px;
     justify-content: center;
     flex-wrap: wrap;
 }
 
 .card {
-    background-color: #1f1f1f;
-    padding: 25px;
-    border-radius: 10px;
-    width: 280px;
+    background: #1f1f1f;
+    padding: 30px;
+    width: 300px;
+    border-radius: 14px;
     text-align: center;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    border: 1px solid #2a2a2a;
+    transition: transform 0.3s ease;
 }
 
 .card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
-}
-
-.card h3 {
-    margin-top: 0;
-    margin-bottom: 10px;
-    font-size: 20px;
+    transform: translateY(-6px);
 }
 
 .card p {
     color: #bbb;
-    font-size: 15px;
 }
 
-/* ---------- Demo Video Section ---------- */
+.features-action {
+    margin-top: 50px;
+    text-align: center;
+}
+
 .demo {
-    padding: 80px 20px;
+    padding: 140px 20px;
     background-color: #121212;
 }
 
 .demo h2 {
     text-align: center;
-    font-size: 32px;
-    margin-bottom: 15px;
+    font-size: 34px;
 }
 
 .demo-text {
-    text-align: center;
     max-width: 700px;
-    margin: 0 auto 40px;
+    margin: 20px auto 50px;
+    text-align: center;
     color: #ccc;
-    font-size: 16px;
 }
 
-/* Responsive Video Wrapper */
 .video-wrapper {
     position: relative;
-    padding-bottom: 56.25%; /* 16:9 ratio */
+    padding-bottom: 56.25%;
     height: 0;
     max-width: 900px;
     margin: 0 auto;
-    border-radius: 12px;
+    border-radius: 16px;
     overflow: hidden;
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6);
+    box-shadow: 0 18px 40px rgba(0,0,0,0.6);
 }
 
 .video-wrapper iframe {
     position: absolute;
-    top: 0;
-    left: 0;
+    inset: 0;
     width: 100%;
     height: 100%;
 }
 
-
-/* ---------- Footer ---------- */
 footer {
-    background-color: #111;
-    border-top: 1px solid #222;
-    padding: 20px;
+    padding: 25px;
     text-align: center;
-    font-size: 14px;
+    background: #111;
+    border-top: 1px solid #222;
     color: #aaa;
 }
 
-.logo {
-    font-size: 24px;
-    font-weight: 600;
-    letter-spacing: 0.5px;
-    color: #ffffff;        /* Force white */
-    text-decoration: none; /* Remove underline */
+.reveal {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.9s ease, transform 0.9s ease;
 }
 
-.logo:visited {
-    color: #ffffff;        /* Prevent purple visited state */
-}
-
-.logo:hover {
-    color: #ff6600;        /* Same hover as nav */
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
 }
