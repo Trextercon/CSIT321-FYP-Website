@@ -108,6 +108,29 @@ nav a:hover {
     margin-bottom: 40px;
 }
 
+.hero-video {
+    margin: 40px auto 45px;
+    max-width: 850px;
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 18px 40px rgba(0,0,0,0.6);
+}
+
+.hero-video video {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 18px;
+}
+
+.about-video {
+  width: 100%;
+  max-width: 900px;
+  border-radius: 12px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+}
+
+
 .our-team {
     position: relative;
     min-height: 85vh;
