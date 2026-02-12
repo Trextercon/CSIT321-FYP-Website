@@ -24,7 +24,7 @@
 
 <main class="page-content">
 
-    <section class="features-hero">
+    <section class="features-hero reveal">
         <div class="container">
             <h1>Powerful Features</h1>
             <p>
@@ -36,9 +36,10 @@
     <section class="features-list">
         <div class="container">
             
-            <div class="feature-item" onclick="toggleFeature(this)">
+            <div class="feature-item reveal" onclick="toggleFeature(this)">
                 <div class="feature-header">
-                <div class="feature-icon">🎮</div> <div class="feature-text">
+                 <div class="feature-icon">🎮</div> 
+                    <div class="feature-text">
                     <h3>Customizable Layouts</h3>
                     <p>
                         Don't like the default button placement? No problem. 
@@ -57,7 +58,7 @@
                 </div>
             </div>
 
-            <div class="feature-item" onclick="toggleFeature(this)">
+            <div class="feature-item reveal" onclick="toggleFeature(this)">
                 <div class="feature-header">
                 <div class="feature-icon">⚡</div>
                 <div class="feature-text">
@@ -79,7 +80,7 @@
                 </div>
             </div>
 
-<div class="feature-item" onclick="toggleFeature(this)">
+<div class="feature-item reveal" onclick="toggleFeature(this)">
     
     <div class="feature-header">
         <div class="feature-icon">👥</div>
@@ -105,10 +106,13 @@
 
 <script>
     function toggleFeature(element) {
-        // This toggles the 'active' class on the clicked element
-        element.classList.toggle("active");
+        
+        element.classList.toggle("expanded");
     }
 </script>
+
+<script src="scroll.js"></script>
+
 </body>
 </html>
 
