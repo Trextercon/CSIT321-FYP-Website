@@ -314,3 +314,33 @@ footer {
 #backToTop:hover {
     transform: translateY(-4px);
 }
+
+.feature-icon {
+    font-size: 40px;
+    background-color: #111; /*  background circle */
+    width: 80px;
+    height: 80px;
+    
+    /* centre */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    border-radius: 50%; 
+    color: #ffe08a;     
+    
+
+    margin: 0 auto 20px auto;
+    
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    
+   
+    transition: transform 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover .feature-icon {
+    transform: scale(1.15) rotate(-5deg); 
+    color: #ff8533; 
+    background-color: #000;
+    box-shadow: 0 0 20px rgba(255, 133, 51, 0.4); 
+}
