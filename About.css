@@ -48,10 +48,20 @@ header .container {
     letter-spacing: 0.5px;
     color: #ffffff;
     text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo-icon {
+    width: 34px;
+    height: 34px;
+    object-fit: contain;
+    display: block;
 }
 
 .logo:hover {
-    color: #ff6600;
+    color: #ffe08a;
 }
 
 nav ul {
@@ -70,7 +80,7 @@ nav a {
 
 nav a:hover,
 nav a.active {
-    color: #ff6600;
+    color: #ffe08a;
 }
 
 .about-hero {

@@ -35,12 +35,23 @@ header .container {
 .logo {
     font-size: 24px;
     font-weight: 600;
-    color: #fff;
+    letter-spacing: 0.5px;
+    color: #ffffff;
     text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo-icon {
+    width: 34px;
+    height: 34px;
+    object-fit: contain;
+    display: block;
 }
 
 .logo:hover {
-    color: #ff6600;
+    color: #ffe08a;
 }
 
 nav ul {
@@ -58,7 +69,7 @@ nav a {
 }
 
 nav a:hover {
-    color: #ff6600;
+    color: #ffe08a;
 }
 .btn {
     display: inline-block;
@@ -71,7 +82,7 @@ nav a:hover {
 }
 
 .btn-primary {
-    background: linear-gradient(135deg, #ff6600, #ff8533);
+    background: linear-gradient(135deg, #ffe08a, #ff8533);
     color: #fff;
     box-shadow: 0 12px 30px rgba(255,102,0,0.35);
 }

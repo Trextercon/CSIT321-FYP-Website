@@ -48,6 +48,16 @@ header .container {
     letter-spacing: 0.5px;
     color: #ffffff;
     text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo-icon {
+    width: 34px;
+    height: 34px;
+    object-fit: contain;
+    display: block;
 }
 
 .logo:visited {
@@ -55,7 +65,7 @@ header .container {
 }
 
 .logo:hover {
-    color: #ff6600;
+    color: #ffe08a;
 }
 
 nav ul {
@@ -74,7 +84,7 @@ nav a {
 
 nav a:hover,
 nav a.active {
-    color: #ff6600;
+    color: #ffe08a;
 }
 
 .download-hero {
@@ -118,7 +128,7 @@ nav a.active {
 
 .platform-card:hover {
     transform: translateY(-5px);
-    border-color: #ff6600;
+    border-color: #ffe08a;
 }
 
 .platform-icon {
@@ -141,7 +151,7 @@ nav a.active {
     display: inline-block;
     padding: 12px 26px;
     border-radius: 30px;
-    background-color: #ff6600;
+    background-color: #ffe08a;
     color: #000;
     font-weight: 600;
     text-decoration: none;
