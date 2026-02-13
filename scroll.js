@@ -12,3 +12,23 @@ const observer = new IntersectionObserver(
 );
 
 reveals.forEach(section => observer.observe(section));
+
+const demoVideo = document.getElementById("demoVideo");
+
+if (demoVideo) {
+    const videoObserver = new IntersectionObserver(
+        entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    demoVideo.play();
+                } else {
+                    demoVideo.pause();
+                }
+            });
+        },
+        { threshold: 0.6 } // plays when 60% visible
+    );
+
+    videoObserver.observe(demoVideo);
+}
+
