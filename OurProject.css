@@ -250,6 +250,20 @@ nav a:hover {
     height: 100%;
 }
 
+.video-container {
+    max-width: 900px;
+    margin: 40px auto 0;
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6);
+}
+
+.video-container video {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
 footer {
     padding: 25px;
     text-align: center;
